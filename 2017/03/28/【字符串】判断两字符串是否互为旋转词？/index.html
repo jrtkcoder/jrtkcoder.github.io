@@ -6,14 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Zhisheng的博客</title>
+  <title>【字符串】判断两字符串是否互为旋转词？ | Zhisheng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zhisheng的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="相关阅读：字符串逆序问题的解决方法题目：
+如果对于一个字符串A，将A的前面任意一部分挪到后边去形成的字符串称为A的旋转词。
+比如A=”12345”,A的旋转词有”12345”,”23451”,”34512”,”45123”和”51234”。
+对于两个字符串A和B，请判断A和B是否互为旋转词。
+给定两个字符串A和B及他们的长度lena，lenb，请返回一个bool值，代表他们是否互为旋转词。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【字符串】判断两字符串是否互为旋转词？">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/【字符串】判断两字符串是否互为旋转词？/index.html">
 <meta property="og:site_name" content="Zhisheng的博客">
+<meta property="og:description" content="相关阅读：字符串逆序问题的解决方法题目：
+如果对于一个字符串A，将A的前面任意一部分挪到后边去形成的字符串称为A的旋转词。
+比如A=”12345”,A的旋转词有”12345”,”23451”,”34512”,”45123”和”51234”。
+对于两个字符串A和B，请判断A和B是否互为旋转词。
+给定两个字符串A和B及他们的长度lena，lenb，请返回一个bool值，代表他们是否互为旋转词。">
+<meta property="og:updated_time" content="2017-04-13T14:16:54.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhisheng的博客">
+<meta name="twitter:title" content="【字符串】判断两字符串是否互为旋转词？">
+<meta name="twitter:description" content="相关阅读：字符串逆序问题的解决方法题目：
+如果对于一个字符串A，将A的前面任意一部分挪到后边去形成的字符串称为A的旋转词。
+比如A=”12345”,A的旋转词有”12345”,”23451”,”34512”,”45123”和”51234”。
+对于两个字符串A和B，请判断A和B是否互为旋转词。
+给定两个字符串A和B及他们的长度lena，lenb，请返回一个bool值，代表他们是否互为旋转词。">
   
     <link rel="alternative" href="/atom.xml" title="Zhisheng的博客" type="application/atom+xml">
   
@@ -161,240 +177,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-android-projects" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-【字符串】判断两字符串是否互为旋转词？" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/13/android-projects/">源码大招：不服来战！撸这些完整项目，你不牛逼都难！</a>
+    <h1 class="article-title" itemprop="name">
+      【字符串】判断两字符串是否互为旋转词？
     </h1>
   
 
         
-        <a href="/2017/05/13/android-projects/" class="archive-article-date">
-  	<time datetime="2017-05-13T10:04:51.795Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+        <a href="/2017/03/28/【字符串】判断两字符串是否互为旋转词？/" class="archive-article-date">
+  	<time datetime="2017-03-28T10:49:25.536Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>经常有人问我有没有什么项目代码，我回复说去 Github 找，但是还是好多人不知道如何找到那些比较好的项目。</p>
-<p>今天花了点时间找了些安卓的项目，觉得还是不错的，几乎就是自己生活常用的一些 app ，如果你是一个 Android 开发者，我觉得撸完这些项目，你想不牛逼都难。</p>
-<h3 id="菜鸟新闻"><a href="#菜鸟新闻" class="headerlink" title="菜鸟新闻"></a>菜鸟新闻</h3><p><a href="http://www.cniao5.com/">菜鸟新闻</a> 客户端是一个仿照36Kr官方,实 时抓取36Kr官网数据的资讯类新闻客户端。</p>
-<p>包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。<br>
-        
-          <a class="article-more-a" href="/2017/05/13/android-projects/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/13/android-projects/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-poetry" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/11/poetry/">最近很火的鸡汤，分享给大家</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/11/poetry/" class="archive-article-date">
-  	<time datetime="2017-05-11T12:33:20.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="lt-最近很火的一首小诗，分享给大家-gt"><a href="#lt-最近很火的一首小诗，分享给大家-gt" class="headerlink" title="&lt;最近很火的一首小诗，分享给大家&gt;"></a>&lt;最近很火的一首小诗，分享给大家&gt;</h4><p><img src="http://ohfk1r827.bkt.clouddn.com/owl-2287017_960_720.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/05/11/poetry/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/11/poetry/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-java-var" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/06/java-var/">从对象深入分析 Java 中实例变量和类变量的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/06/java-var/" class="archive-article-date">
-  	<time datetime="2017-05-06T06:24:51.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="实例变量-和-类变量"><a href="#实例变量-和-类变量" class="headerlink" title="实例变量 和 类变量"></a>实例变量 和 类变量</h3><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>特点：作用时间短，存储在方法的栈内存中</p>
-<p>种类：</p>
+        <h4 id="相关阅读："><a href="#相关阅读：" class="headerlink" title="相关阅读："></a>相关阅读：</h4><h3 id="字符串逆序问题的解决方法"><a href="#字符串逆序问题的解决方法" class="headerlink" title="字符串逆序问题的解决方法"></a><a href="http://blog.csdn.net/tzs_1041218129/article/details/54645569" target="_blank" rel="external">字符串逆序问题的解决方法</a></h3><p>题目：</p>
+<p>如果对于一个字符串A，将A的前面任意一部分挪到后边去形成的字符串称为A的旋转词。</p>
+<p>比如A=”12345”,A的旋转词有”12345”,”23451”,”34512”,”45123”和”51234”。</p>
+<p>对于两个字符串A和B，请判断A和B是否互为旋转词。</p>
+<p>给定两个字符串A和B及他们的长度lena，lenb，请返回一个bool值，代表他们是否互为旋转词。<br><a id="more"></a></p>
+<p>测试样例：</p>
+<blockquote>
+<p>“cdab”,4,”abcd”,4</p>
+<p>返回：true</p>
+</blockquote>
+<p>通过代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class Rotation</div><div class="line">&#123;</div><div class="line">    public static boolean chkRotation(String A, int lena, String B, int lenb) &#123;</div><div class="line">        // write code here</div><div class="line">        if (lena != lenb)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;else &#123;</div><div class="line">            String str = A + A;</div><div class="line">            return str.contains(B);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>也可以使用 <strong>indexOf</strong>。</p>
+<p>其区别是：</p>
+<blockquote>
 <ul>
-<li>形参：方法签名中定义的局部变量，由方法调用者负责为其赋值，随方法结束而消亡</li>
-<li>方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡</li>
-<li>代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡</li>
+<li>contains 是找指定字符串是否包含一个字符串，返回值的 boolean 类型，即只有 true 和 false<br><br></li>
+<li>indexOf 有多个重载，但无论哪个，都是做一定的匹配，然后把匹配的第一个字符的位置返回，返回的是 int 类型，如果没找到，那么返回 -1</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/05/06/java-var/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</blockquote>
+<p>稍微再深究一下的我看了下 <code>contains</code> 的源码，结果发现他调用的是     <code>indexOf</code> 方法。</p>
+<p>源码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Returns true if and only if this string contains the specified</div><div class="line">     * sequence of char values.</div><div class="line">     *</div><div class="line">     * @param s the sequence to search for</div><div class="line">     * @return true if this string contains &#123;@code s&#125;, false otherwise</div><div class="line">     * @since 1.5</div><div class="line">     */</div><div class="line">    public boolean contains(CharSequence s) &#123;</div><div class="line">        return indexOf(s.toString()) &gt; -1;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>意思就是如上面的区别所说的，他只有两个返回值 <code>true</code> 和 <code>false</code>。</p>
+<p>于是我们继续看一下 <code>indexOf</code> 方法的源码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Returns the index within this string of the first occurrence of the</div><div class="line">     * specified substring.</div><div class="line">     *</div><div class="line">     * &lt;p&gt;The returned index is the smallest value &lt;i&gt;k&lt;/i&gt; for which:</div><div class="line">     * &lt;blockquote&gt;&lt;pre&gt;</div><div class="line">     * this.startsWith(str, &lt;i&gt;k&lt;/i&gt;)</div><div class="line">     * &lt;/pre&gt;&lt;/blockquote&gt;</div><div class="line">     * If no such value of &lt;i&gt;k&lt;/i&gt; exists, then &#123;@code -1&#125; is returned.</div><div class="line">     *</div><div class="line">     * @param   str   the substring to search for.</div><div class="line">     * @return  the index of the first occurrence of the specified substring,</div><div class="line">     *          or &#123;@code -1&#125; if there is no such occurrence.</div><div class="line"></div><div class="line">    public int indexOf(String str) &#123;</div><div class="line">        return indexOf(str, 0);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>继续可以发现他又调用了 <code>indexOf</code> 的两个参数方法，只不过索引是 <strong>0</strong> 。</p>
+<p>然后我继续看带有两个参数的 <code>indexOf</code> 方法源码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Returns the index within this string of the first occurrence of the</div><div class="line">     * specified substring, starting at the specified index.</div><div class="line">     *</div><div class="line">     * &lt;p&gt;The returned index is the smallest value &lt;i&gt;k&lt;/i&gt; for which:</div><div class="line">     * &lt;blockquote&gt;&lt;pre&gt;</div><div class="line">     * &lt;i&gt;k&lt;/i&gt; &amp;gt;= fromIndex &#123;@code &amp;&amp;&#125; this.startsWith(str, &lt;i&gt;k&lt;/i&gt;)</div><div class="line">     * &lt;/pre&gt;&lt;/blockquote&gt;</div><div class="line">     * If no such value of &lt;i&gt;k&lt;/i&gt; exists, then &#123;@code -1&#125; is returned.</div><div class="line">     *</div><div class="line">     * @param   str         the substring to search for.</div><div class="line">     * @param   fromIndex   the index from which to start the search.</div><div class="line">     * @return  the index of the first occurrence of the specified substring,</div><div class="line">     *          starting at the specified index,</div><div class="line">     *          or &#123;@code -1&#125; if there is no such occurrence.</div><div class="line">     */</div><div class="line"></div><div class="line">    public int indexOf(String str, int fromIndex) &#123;</div><div class="line">        return indexOf(value, 0, value.length,</div><div class="line">                str.value, 0, str.value.length, fromIndex);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>哈哈，发现他又调用了 <code>indexOf</code> 的方法，这次终于我们可以看到最后的 <strong>查找算法</strong> 如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * Code shared by String and StringBuffer to do searches. The</div><div class="line"> * source is the character array being searched, and the target</div><div class="line"> * is the string being searched for.</div><div class="line"> *</div><div class="line"> * @param   source       the characters being searched.</div><div class="line"> * @param   sourceOffset offset of the source string.</div><div class="line"> * @param   sourceCount  count of the source string.</div><div class="line"> * @param   target       the characters being searched for.</div><div class="line"> * @param   targetOffset offset of the target string.</div><div class="line"> * @param   targetCount  count of the target string.</div><div class="line"> * @param   fromIndex    the index to begin searching from.</div><div class="line"> */</div><div class="line">static int indexOf(char[] source, int sourceOffset, int sourceCount,</div><div class="line">        char[] target, int targetOffset, int targetCount,</div><div class="line">        int fromIndex) &#123;</div><div class="line">    if (fromIndex &gt;= sourceCount) &#123;</div><div class="line">        return (targetCount == 0 ? sourceCount : -1);</div><div class="line">    &#125;</div><div class="line">    if (fromIndex &lt; 0) &#123;</div><div class="line">        fromIndex = 0;</div><div class="line">    &#125;</div><div class="line">    if (targetCount == 0) &#123;</div><div class="line">        return fromIndex;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    char first = target[targetOffset];</div><div class="line">    int max = sourceOffset + (sourceCount - targetCount);</div><div class="line"></div><div class="line">    for (int i = sourceOffset + fromIndex; i &lt;= max; i++) &#123;</div><div class="line">        /* Look for first character. */</div><div class="line">        if (source[i] != first) &#123;</div><div class="line">            while (++i &lt;= max &amp;&amp; source[i] != first);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /* Found first character, now look at the rest of v2 */</div><div class="line">        if (i &lt;= max) &#123;</div><div class="line">            int j = i + 1;</div><div class="line">            int end = j + targetCount - 1;</div><div class="line">            for (int k = targetOffset + 1; j &lt; end &amp;&amp; source[j]</div><div class="line">                    == target[k]; j++, k++);</div><div class="line"></div><div class="line">            if (j == end) &#123;</div><div class="line">                /* Found whole string. */</div><div class="line">                return i - sourceOffset;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p><strong>遇到这种问题多查看源码，想深入就得从底层做起！</strong></p>
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/06/java-var/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Java-performance-tuning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/30/Java-performance-tuning/">Java 性能调优需要格外注意的细节</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/30/Java-performance-tuning/" class="archive-article-date">
-  	<time datetime="2017-04-30T05:20:06.291Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天写了篇文章 <a href="http://www.54tianzhisheng.cn/2017/04/29/MySQL-select-good/">《MySQL 处理海量数据时的一些优化查询速度方法》</a> ，其实开发中不止数据库要优化，还有我们本身的开发代码也需要优化，这样我们开发的产品才能够得到极致的体验。也许有些人认为这些细小的地方没有啥好修改的，改与不改对运行效率没啥大的影响？首先在我们本地一个人测试下效率是不怎么明显，但是如果到发布上线后，你的用户有几百万，甚至上千万，这些用户同时访问你的网站，那么你的网站是否经得住考验呢，效率那高不高呢，如果效率不高，那么需要多出很多买服务器的经费呢，所以想想还是很有必要注意这些小的细节。今天就讲讲一些 Java 性能调优需要格外注意的一些细节。</p>
-<p>代码优化的目标：</p>
-<ul>
-<li>减少代码的体积</li>
-<li>提高代码的运行效率</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你支持我买服务器！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -405,136 +273,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MySQL-select-good" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/29/MySQL-select-good/">MySQL 处理海量数据时的一些优化查询速度方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/29/MySQL-select-good/" class="archive-article-date">
-  	<time datetime="2017-04-29T10:05:54.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在参与实际项目中，当 MySQL 表的数据量达到百万级时，普通的 SQL 查询效率呈直线下降，而且如果 where 中的查询条件较多时，其查询速度无法容忍。想想可知，假如我们查询淘宝的一个订单详情，如果查询时间高达几十秒，这么高的查询延时，任何用户都会抓狂。因此如何提高 SQL 语句查询效率，显得十分重要。<br>
-        
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-feiji" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/23/feiji/">记录下自己第一次坐飞机的感受</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/23/feiji/" class="archive-article-date">
-  	<time datetime="2017-04-23T02:20:42.665Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>因为学校的原因，需要在大三的时候出去实训几个月，然后选择的是在昆山，公司规定要在 2017 年 4 月 19 号之前赶到，所以我提前订的机票是 17 号，之所以会订机票，其实很大一部分原因是由于自己之前没有坐过飞机，所以想体验一下坐飞机的感脚（嘿嘿），再加上这是机票的淡季，所以坐飞机的价钱比做高铁还便宜。整个行程：学校 ——&gt;  南昌机场 ——&gt;  上海虹桥机场 ——&gt;  公司</p>
-<h3 id="学校出发"><a href="#学校出发" class="headerlink" title="学校出发"></a>学校出发</h3><p>10 点左右去食堂吃了个早餐，然后打包好自己的行李，由于第一次坐飞机，所以打算提前时间去机场，然后在机场熟悉熟悉环境，不然的话错过飞机，那就 gg 了。大概 11：30 了，就拖着行李出门，在学校门口叫了辆 滴滴车 去机场（因为公交车要坐好久并且去机场的路好烂），叫的滴滴车他走的是高速，很快。<br>
-        
-          <a class="article-more-a" href="/2017/04/23/feiji/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">旋转词</a>
         		</li>
       		
 		</ul>
@@ -543,18 +294,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/23/feiji/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADMElEQVR42u3aS27CUAwFUPa/aSp11A4C13aQEnMyQgWSd8zA9efxiK/n7/X39d/r6O9Hnzy6c/Kso+c+PnFhY2Nj34RdvXV+0KOnVD+Z3Ce3YGNjY29lJ0mrmgVeB+j1X3r3zNMkNjY29neye0moCqjysLGxsbF7CWwC6z13nmixsbGxd7OTplJeYOTtpLzdn4fy5F4aNjY29uXZvUHvNV9/fL6NjY2NfTH2c3AlI97efeaJ8M0TsbGxsRexkxWZJKVV360mpDyNFUKJjY2N/TXs5DG9ELweOUzOcEICw8bGxr4JO1md6YVmXswkQ4LqGCOKLjY2Nvat2Gc1bnqD2DwJJeCkjMHGxsbex85v0funP0mQ1ZHDfCyBjY2NvYk9WZ3Mi5lzi4pkDJCEHhsbG3sfu5p4eqVFuTaKR9HVtIeNjY29g53fbhKUc4+epMk3QcfGxsZex07WHydrkfMFoHkIHmcdGhsbG/ti7OSIvZZNctAkHL0Fo6i9hY2Njb2CnQ9cq2lmMjyefP6RxxgbGxt7BTtvHvUe2VvfmRQn1bYUNjY29t3Z1dZ/dQRbHQz3vlsufrCxsbEXsc8doFaHuKM9o/EKETY2NvY+dm+20JxIBA2jSaurcE5sbGzsm7OTW0/AebLJC4xeE6q83YONjY19K3ZSSPTGw9Xm/utTTZ717zU2Njb2OvYkGSTlRHLoXmHTPDk2Njb2OnavtJi3eKoFySRYb/I2NjY29s3ZvXlCUsb0xrdJIdQLzQljFGxsbOyLsedrlL1k1gtfcoZy/x8bGxt7BXuyLpODP5H2qiVKIXtjY2Nj34qdpLHqqKCX9vJ3e+0wbGxs7N3sanLKRwj5ULm3PDT62bCxsbGXsnsFQJJ+qgkpH1eMMjY2Njb2bdnP4jU57nzkUF36OQwENjY29iJ2b1GmmtKqI+QJBhsbG/s72b0R76R0OStNjobK2NjY2OvYvcTQO9wkZc5HCNjY2NjYk8Z9dV0yKUuqyQ8bGxv7m9nVlce88OgVOb22FzY2NvZWdnVRpjfQrZY3eYjLwwlsbGzsRexqa6a6ptMb4ibfqv4wo/k2NjY29hXZP+oCO07nTldFAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/28/【字符串】字符串逆序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          字符串
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/28/程序访问文件的几种方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">程序访问文件的几种方式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -562,12 +378,30 @@
 
 
   
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+    <div class="duoshuo"></div>
   
 
+
+
+  <section id="comments">
+<!--高速版，加载速度快，使用前需测试页面的兼容性-->
+<div id="SOHUCS" sid="【字符串】判断两字符串是否互为旋转词？"  style="padding: 0px 30px 0px 46px;"></div>
+<script>
+  (function(){
+    var appid = 'cysWCg9Ij',
+    conf = '7f51baf245f3217589bb3b4ba8d8c691';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>
+  </section>
+  
 
           </div>
         </div>
@@ -596,8 +430,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

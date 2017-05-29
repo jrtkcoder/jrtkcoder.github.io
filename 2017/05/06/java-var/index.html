@@ -6,14 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Zhisheng的博客</title>
+  <title>从对象深入分析 Java 中实例变量和类变量的区别 | Zhisheng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zhisheng的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="实例变量 和 类变量局部变量特点：作用时间短，存储在方法的栈内存中
+种类：
+
+形参：方法签名中定义的局部变量，由方法调用者负责为其赋值，随方法结束而消亡
+方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡
+代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从对象深入分析 Java 中实例变量和类变量的区别">
+<meta property="og:url" content="http://yoursite.com/2017/05/06/java-var/index.html">
 <meta property="og:site_name" content="Zhisheng的博客">
+<meta property="og:description" content="实例变量 和 类变量局部变量特点：作用时间短，存储在方法的栈内存中
+种类：
+
+形参：方法签名中定义的局部变量，由方法调用者负责为其赋值，随方法结束而消亡
+方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡
+代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡">
+<meta property="og:updated_time" content="2017-05-06T06:25:36.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhisheng的博客">
+<meta name="twitter:title" content="从对象深入分析 Java 中实例变量和类变量的区别">
+<meta name="twitter:description" content="实例变量 和 类变量局部变量特点：作用时间短，存储在方法的栈内存中
+种类：
+
+形参：方法签名中定义的局部变量，由方法调用者负责为其赋值，随方法结束而消亡
+方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡
+代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡">
   
     <link rel="alternative" href="/atom.xml" title="Zhisheng的博客" type="application/atom+xml">
   
@@ -161,147 +180,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-android-projects" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-java-var" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/13/android-projects/">源码大招：不服来战！撸这些完整项目，你不牛逼都难！</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/13/android-projects/" class="archive-article-date">
-  	<time datetime="2017-05-13T10:04:51.795Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>经常有人问我有没有什么项目代码，我回复说去 Github 找，但是还是好多人不知道如何找到那些比较好的项目。</p>
-<p>今天花了点时间找了些安卓的项目，觉得还是不错的，几乎就是自己生活常用的一些 app ，如果你是一个 Android 开发者，我觉得撸完这些项目，你想不牛逼都难。</p>
-<h3 id="菜鸟新闻"><a href="#菜鸟新闻" class="headerlink" title="菜鸟新闻"></a>菜鸟新闻</h3><p><a href="http://www.cniao5.com/">菜鸟新闻</a> 客户端是一个仿照36Kr官方,实 时抓取36Kr官网数据的资讯类新闻客户端。</p>
-<p>包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。<br>
-        
-          <a class="article-more-a" href="/2017/05/13/android-projects/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/13/android-projects/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-poetry" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/11/poetry/">最近很火的鸡汤，分享给大家</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/11/poetry/" class="archive-article-date">
-  	<time datetime="2017-05-11T12:33:20.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="lt-最近很火的一首小诗，分享给大家-gt"><a href="#lt-最近很火的一首小诗，分享给大家-gt" class="headerlink" title="&lt;最近很火的一首小诗，分享给大家&gt;"></a>&lt;最近很火的一首小诗，分享给大家&gt;</h4><p><img src="http://ohfk1r827.bkt.clouddn.com/owl-2287017_960_720.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/05/11/poetry/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/11/poetry/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-java-var" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/06/java-var/">从对象深入分析 Java 中实例变量和类变量的区别</a>
+    <h1 class="article-title" itemprop="name">
+      从对象深入分析 Java 中实例变量和类变量的区别
     </h1>
   
 
@@ -321,80 +207,107 @@
 <li>方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡</li>
 <li>代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/05/06/java-var/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/06/java-var/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Java-performance-tuning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/30/Java-performance-tuning/">Java 性能调优需要格外注意的细节</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/30/Java-performance-tuning/" class="archive-article-date">
-  	<time datetime="2017-04-30T05:20:06.291Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天写了篇文章 <a href="http://www.54tianzhisheng.cn/2017/04/29/MySQL-select-good/">《MySQL 处理海量数据时的一些优化查询速度方法》</a> ，其实开发中不止数据库要优化，还有我们本身的开发代码也需要优化，这样我们开发的产品才能够得到极致的体验。也许有些人认为这些细小的地方没有啥好修改的，改与不改对运行效率没啥大的影响？首先在我们本地一个人测试下效率是不怎么明显，但是如果到发布上线后，你的用户有几百万，甚至上千万，这些用户同时访问你的网站，那么你的网站是否经得住考验呢，效率那高不高呢，如果效率不高，那么需要多出很多买服务器的经费呢，所以想想还是很有必要注意这些小的细节。今天就讲讲一些 Java 性能调优需要格外注意的一些细节。</p>
-<p>代码优化的目标：</p>
+<a id="more"></a>
+<h4 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h4><p>类体内定义的变量，如果该成员变量没有使用 static 修饰，那该成员变量又被称为非静态变量或实例变量，如果使用 static 修饰，则该成员变量又可被称为静态变量或类变量。</p>
+<h4 id="实例变量和类变量的属性"><a href="#实例变量和类变量的属性" class="headerlink" title="实例变量和类变量的属性"></a>实例变量和类变量的属性</h4><p>使用 static 修饰的成员变量是类变量，属于该类本身，没有使用 static 修饰的成员变量是实例变量，属于该类的实例，在同一个类中，每一个类只对应一个 Class 对象，但每个类可以创建多个对象。</p>
+<p>由于同一个 JVM 内的每个类只对应一个 CLass 对象，因此同一个 JVM 内的一个类的类变量只需要一块内存空间；但对于实例变量而言，该类每创建一次实例，就需要为该实例变量分配一块内存空间。也就是说，程序中创建了几个实例，实例变量就需要几块内存空间。</p>
+<p>这里我想到一道面试题目：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line">  &#123;</div><div class="line">    System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span>&#123;</div><div class="line">    System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        A a = <span class="keyword">new</span> A();</div><div class="line">        A a1 = <span class="keyword">new</span> A();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">我是静态代码块</div><div class="line">我是代码块</div><div class="line">我是代码块</div></pre></td></tr></table></figure>
+<p>静态代码块只执行一次，而代码块每创建一个实例，就会打印一次。</p>
+<h4 id="实例变量的初始化时机"><a href="#实例变量的初始化时机" class="headerlink" title="实例变量的初始化时机"></a>实例变量的初始化时机</h4><p>程序可在3个地方对实例变量执行初始化：</p>
 <ul>
-<li>减少代码的体积</li>
-<li>提高代码的运行效率</li>
+<li>定义实例变量时指定初始值</li>
+<li>非静态初始化块中对实例变量指定初始值</li>
+<li>构造器中对实例变量指定初始值</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/#more">more >></a>
-        
+<p>上面第一种和第二种方式比第三种方式更早执行，但第一、二种方式的执行顺序与他们在源程序中的排列顺序相同。</p>
+<p>同样在上面那个代码上加上一个变量 weight 的成员变量，我们来验证下上面的初始化顺序：</p>
+<p>1、<code>定义实例变量指定初始值</code> 在 <code>非静态初始化块对实例变量指定初始值</code> 之后:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line">    &#123;</div><div class="line">        weight = <span class="number">2.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">double</span> weight = <span class="number">2.0</span>;</div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        A a = <span class="keyword">new</span> A();</div><div class="line">        A a1 = <span class="keyword">new</span> A();</div><div class="line">        System.out.println(a.weight);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">我是静态代码块</div><div class="line">我是代码块</div><div class="line">我是代码块</div><div class="line">2.0</div></pre></td></tr></table></figure>
+<p>2、<code>定义实例变量指定初始值</code> 在 <code>非静态初始化块对实例变量指定初始值</code> 之前:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line">	<span class="keyword">double</span> weight = <span class="number">2.0</span>;</div><div class="line">    &#123;</div><div class="line">        weight = <span class="number">2.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        A a = <span class="keyword">new</span> A();</div><div class="line">        A a1 = <span class="keyword">new</span> A();</div><div class="line">        System.out.println(a.weight);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">我是静态代码块</div><div class="line">我是代码块</div><div class="line">我是代码块</div><div class="line">2.1</div></pre></td></tr></table></figure>
+<p>大家有没有觉得很奇怪？</p>
+<p>我来好好说清楚下：</p>
+<blockquote>
+<p>定义实例变量时指定的初始值、初始代码块中为实例变量指定初始值的语句的地位是平等的，当经过编译器处理后，他们都将会被提取到构造器中。也就是说，这条语句 <code>double weight = 2.0;</code> 实际上会被分成如下 2 次执行：</p>
+<ul>
+<li><code>double weight;</code> : 创建 Java 对象时系统根据该语句为该对象分配内存。</li>
+<li><code>weight = 2.1;</code> : 这条语句将会被提取到 Java 类的构造器中执行。</li>
+</ul>
+</blockquote>
+<p>只说原理，大家肯定不怎么信，那么还有拿出源码来，这样才有信服能力的吗？是不？</p>
+<p>这里我直接使用软件将代码的字节码文件反编译过来，看看里面是怎样的组成？</p>
+<p>第一个代码的反编译源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">double</span> weight;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.1</span>D;</div><div class="line">    System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.0</span>D;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span></div><div class="line">  &#123;</div><div class="line">    System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">  &#123;</div><div class="line">    A a = <span class="keyword">new</span> A();</div><div class="line">    A a1 = <span class="keyword">new</span> A();</div><div class="line">    System.out.println(a.weight);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二个代码反编译源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">double</span> weight;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.0</span>D;</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.1</span>D;</div><div class="line">    System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span></div><div class="line">  &#123;</div><div class="line">    System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">  &#123;</div><div class="line">    A a = <span class="keyword">new</span> A();</div><div class="line">    A a1 = <span class="keyword">new</span> A();</div><div class="line">    System.out.println(a.weight);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这下子满意了吧！</p>
+<p>通过反编译的源码可以看到该类定义的 weight 实例变量时不再有初始值，为 weight 指定初始值的代码也被提到了构造器中去了，但是我们也可以发现之前规则也是满足的。</p>
+<p>他们的赋值语句都被合并到构造器中，在合并过程中，定义的变量语句转换得到的赋值语句，初始代码块中的语句都转换得到的赋值语句，总是位于构造器的所有语句之前，合并后，两种赋值语句的顺序也保持了它们在 Java 源代码中的顺序。</p>
+<p>大致过程应该了解了吧？如果还不怎么清楚的，建议还是自己将怎个过程在自己的电脑上操作一遍，毕竟光看不练假把式。</p>
+<h4 id="类变量的初始化时机"><a href="#类变量的初始化时机" class="headerlink" title="类变量的初始化时机"></a>类变量的初始化时机</h4><p>JVM 对每一个 Java 类只初始化一次，因此 Java 程序每运行一次，系统只为类变量分配一次内存空间，执行一次初始化。程序可在两个地方对类变量执行初始化：</p>
+<ul>
+<li>定义类变量时指定初始值</li>
+<li>静态初始化代码块中对类变量指定初始值</li>
+</ul>
+<p>这两种方式的执行顺序与它们在源代码中的排列顺序相同。</p>
+<p>还是用上面那个示例，我们在其基础上加个被 static 修饰的变量 height：</p>
+<p>1、<code>定义类变量时指定初始值</code> 在 <code>静态初始化代码块中对类变量指定初始值</code> 之后：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> weight = <span class="number">2.0</span>;</div><div class="line">    &#123;</div><div class="line">        weight = <span class="number">2.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        height = <span class="number">10.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> height = <span class="number">10.0</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        A a = <span class="keyword">new</span> A();</div><div class="line">        A a1 = <span class="keyword">new</span> A();</div><div class="line">        System.out.println(a.weight);</div><div class="line">        System.out.println(height);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">我是静态代码块</div><div class="line">我是代码块</div><div class="line">我是代码块</div><div class="line">2.1</div><div class="line">10.0</div></pre></td></tr></table></figure>
+<p>2、<code>定义类变量时指定初始值</code> 在 <code>静态初始化代码块中对类变量指定初始值</code> 之前：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> height = <span class="number">10.0</span>;</div><div class="line">    <span class="keyword">double</span> weight = <span class="number">2.0</span>;</div><div class="line">    &#123;</div><div class="line">        weight = <span class="number">2.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">static</span>&#123;</div><div class="line">        height = <span class="number">10.1</span>;</div><div class="line">        System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        A a = <span class="keyword">new</span> A();</div><div class="line">        A a1 = <span class="keyword">new</span> A();</div><div class="line">        System.out.println(a.weight);</div><div class="line">        System.out.println(height);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">我是静态代码块</div><div class="line">我是代码块</div><div class="line">我是代码块</div><div class="line">2.1</div><div class="line">10.1</div></pre></td></tr></table></figure>
+<p>其运行结果正如我们预料，但是我们还是看看反编译后的代码吧！</p>
+<p>第一种情况下反编译的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">double</span> weight;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.0</span>D;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.1</span>D;</div><div class="line">    System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span></div><div class="line">  &#123;</div><div class="line">    System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span> <span class="keyword">double</span> height = <span class="number">10.0</span>D;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">  &#123;</div><div class="line">    A a = <span class="keyword">new</span> A();</div><div class="line">    A a1 = <span class="keyword">new</span> A();</div><div class="line">    System.out.println(a.weight);</div><div class="line">    System.out.println(height);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种情况下反编译的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">static</span> <span class="keyword">double</span> height = <span class="number">10.0</span>D;</div><div class="line">  <span class="keyword">double</span> weight;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">A</span><span class="params">()</span></span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.0</span>D;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.weight = <span class="number">2.1</span>D;</div><div class="line">    System.out.println(<span class="string">"我是代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span></div><div class="line">  &#123;</div><div class="line">    height = <span class="number">10.1</span>D;</div><div class="line">    System.out.println(<span class="string">"我是静态代码块"</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">  &#123;</div><div class="line">    A a = <span class="keyword">new</span> A();</div><div class="line">    A a1 = <span class="keyword">new</span> A();</div><div class="line">    System.out.println(a.weight);</div><div class="line">    System.out.println(height);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过反编译源码，可以看到第一种情况下(<code>定义类变量时指定初始值</code> 在 <code>静态初始化代码块中对类变量指定初始值</code> 之后):</p>
+<p>我们在 <strong>静态初始化代码块中对类变量指定初始值</strong> 已经不存在了，只有一个类变量指定的初始值 <code>static double height = 10.0D;</code> , 而在第二种情况下（<code>定义类变量时指定初始值</code> 在 <code>静态初始化代码块中对类变量指定初始值</code> 之前）和之前的源代码顺序是一样的，没啥区别。</p>
+<p>上面的代码中充分的展示了类变量的两种初始化方式 ：每次运行该程序时，系统会为 A 类执行初始化，先为所有类变量分配内存空间，再按照源代码中的排列顺序执行静态初始代码块中所指定的初始值和定义类变量时所指定的初始值。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你支持我买服务器！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -414,18 +327,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aS47DIBAFQN//0h5pViONTF43GDtSsYryMUUWLejHccTj/B3jT/9+5//r8TuLBy4u7jT3HI6EO6ZXl3RlwMXF3c8dF68qYjxl/nfg4uK+n1v9NP8VLi7u93KTbUr1yISLi/tmbnL4SbYmH44uxY0RLi7uU9xqw/SO1zf2d3FxcYvcszh6T1s2Oy4u7hZu9dCSxy3JM5MgNsp7cXFxb+PORK3VULZa4HBxcXdyk8Bjphnaa69czoWLi7uFmzc986ijt3EZLyyaEhcXdxF3psNaiEWLZe5yGbi4uNu5M5cyV0U10SkNFxf3BdyZILYaqzQnwMXFXcrNS1W+Hak2UpNjz4e2KS4u7g3cVe2MXiHDxcV9G7dXeqrTjCOT/ACGi4u7h7sqOJm5yJWHtbi4uHu41cNJNT5J3i8sCRcXdyP36hHH0tFryOLi4j7FzUevRZKXsGYSi4uLu5S7NkCtlsU8mCkvBhcXd5q7qnjlTdVqDFOovri4uEu51WtbSQMluaIxtX3BxcV9Abe6HZmPWKYKGS4u7kPcmUsYzetcuLi4G7m94tK7jDVVEHFxcbdweyeO5hWKGIeLi/sQ9wde41eunJ8ZTAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/poetry/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          最近很火的鸡汤，分享给大家
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/30/Java-performance-tuning/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 性能调优需要格外注意的细节</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -433,141 +411,30 @@
 
 
   
-    <article id="post-MySQL-select-good" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/29/MySQL-select-good/">MySQL 处理海量数据时的一些优化查询速度方法</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/04/29/MySQL-select-good/" class="archive-article-date">
-  	<time datetime="2017-04-29T10:05:54.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在参与实际项目中，当 MySQL 表的数据量达到百万级时，普通的 SQL 查询效率呈直线下降，而且如果 where 中的查询条件较多时，其查询速度无法容忍。想想可知，假如我们查询淘宝的一个订单详情，如果查询时间高达几十秒，这么高的查询延时，任何用户都会抓狂。因此如何提高 SQL 语句查询效率，显得十分重要。<br>
-        
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
+  <section id="comments">
+<!--高速版，加载速度快，使用前需测试页面的兼容性-->
+<div id="SOHUCS" sid="从对象深入分析 Java 中实例变量和类变量的区别"  style="padding: 0px 30px 0px 46px;"></div>
+<script>
+  (function(){
+    var appid = 'cysWCg9Ij',
+    conf = '7f51baf245f3217589bb3b4ba8d8c691';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>
+  </section>
   
-    <article id="post-feiji" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/23/feiji/">记录下自己第一次坐飞机的感受</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/23/feiji/" class="archive-article-date">
-  	<time datetime="2017-04-23T02:20:42.665Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>因为学校的原因，需要在大三的时候出去实训几个月，然后选择的是在昆山，公司规定要在 2017 年 4 月 19 号之前赶到，所以我提前订的机票是 17 号，之所以会订机票，其实很大一部分原因是由于自己之前没有坐过飞机，所以想体验一下坐飞机的感脚（嘿嘿），再加上这是机票的淡季，所以坐飞机的价钱比做高铁还便宜。整个行程：学校 ——&gt;  南昌机场 ——&gt;  上海虹桥机场 ——&gt;  公司</p>
-<h3 id="学校出发"><a href="#学校出发" class="headerlink" title="学校出发"></a>学校出发</h3><p>10 点左右去食堂吃了个早餐，然后打包好自己的行李，由于第一次坐飞机，所以打算提前时间去机场，然后在机场熟悉熟悉环境，不然的话错过飞机，那就 gg 了。大概 11：30 了，就拖着行李出门，在学校门口叫了辆 滴滴车 去机场（因为公交车要坐好久并且去机场的路好烂），叫的滴滴车他走的是高速，很快。<br>
-        
-          <a class="article-more-a" href="/2017/04/23/feiji/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/23/feiji/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-
 
           </div>
         </div>
@@ -596,8 +463,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

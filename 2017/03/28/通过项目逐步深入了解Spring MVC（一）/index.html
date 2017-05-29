@@ -6,14 +6,46 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Zhisheng的博客</title>
+  <title>通过项目逐步深入了解Spring MVC（一） | Zhisheng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Zhisheng的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="相关阅读：本文档和项目代码地址：https://github.com/zhisheng17/springmvc
+
+了解 Spring：
+Spring 官网：http://spring.io/
+一个好的东西一般都会有一个好的文档解释说明，如果你英语还行，建议还是看官方文档。
+
+Spring MVC基础知识什么是Spring MVC？
+Spring MVC框架原理（掌握）
+​    前端控制器、处理器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过项目逐步深入了解Spring MVC（一）">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/通过项目逐步深入了解Spring MVC（一）/index.html">
 <meta property="og:site_name" content="Zhisheng的博客">
+<meta property="og:description" content="相关阅读：本文档和项目代码地址：https://github.com/zhisheng17/springmvc
+
+了解 Spring：
+Spring 官网：http://spring.io/
+一个好的东西一般都会有一个好的文档解释说明，如果你英语还行，建议还是看官方文档。
+
+Spring MVC基础知识什么是Spring MVC？
+Spring MVC框架原理（掌握）
+​    前端控制器、处理器">
+<meta property="og:image" content="http://img.blog.csdn.net/20161219214558360?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20161219214629187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20161219214646359?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-04-13T14:22:27.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhisheng的博客">
+<meta name="twitter:title" content="通过项目逐步深入了解Spring MVC（一）">
+<meta name="twitter:description" content="相关阅读：本文档和项目代码地址：https://github.com/zhisheng17/springmvc
+
+了解 Spring：
+Spring 官网：http://spring.io/
+一个好的东西一般都会有一个好的文档解释说明，如果你英语还行，建议还是看官方文档。
+
+Spring MVC基础知识什么是Spring MVC？
+Spring MVC框架原理（掌握）
+​    前端控制器、处理器">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20161219214558360?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="Zhisheng的博客" type="application/atom+xml">
   
@@ -161,171 +193,128 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-android-projects" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-通过项目逐步深入了解Spring MVC（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/13/android-projects/">源码大招：不服来战！撸这些完整项目，你不牛逼都难！</a>
+    <h1 class="article-title" itemprop="name">
+      通过项目逐步深入了解Spring MVC（一）
     </h1>
   
 
         
-        <a href="/2017/05/13/android-projects/" class="archive-article-date">
-  	<time datetime="2017-05-13T10:04:51.795Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+        <a href="/2017/03/28/通过项目逐步深入了解Spring MVC（一）/" class="archive-article-date">
+  	<time datetime="2017-03-28T10:55:16.943Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>经常有人问我有没有什么项目代码，我回复说去 Github 找，但是还是好多人不知道如何找到那些比较好的项目。</p>
-<p>今天花了点时间找了些安卓的项目，觉得还是不错的，几乎就是自己生活常用的一些 app ，如果你是一个 Android 开发者，我觉得撸完这些项目，你想不牛逼都难。</p>
-<h3 id="菜鸟新闻"><a href="#菜鸟新闻" class="headerlink" title="菜鸟新闻"></a>菜鸟新闻</h3><p><a href="http://www.cniao5.com/">菜鸟新闻</a> 客户端是一个仿照36Kr官方,实 时抓取36Kr官网数据的资讯类新闻客户端。</p>
-<p>包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。<br>
-        
-          <a class="article-more-a" href="/2017/05/13/android-projects/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/13/android-projects/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-poetry" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/11/poetry/">最近很火的鸡汤，分享给大家</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/11/poetry/" class="archive-article-date">
-  	<time datetime="2017-05-11T12:33:20.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="lt-最近很火的一首小诗，分享给大家-gt"><a href="#lt-最近很火的一首小诗，分享给大家-gt" class="headerlink" title="&lt;最近很火的一首小诗，分享给大家&gt;"></a>&lt;最近很火的一首小诗，分享给大家&gt;</h4><p><img src="http://ohfk1r827.bkt.clouddn.com/owl-2287017_960_720.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/05/11/poetry/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        <h3 id="相关阅读："><a href="#相关阅读：" class="headerlink" title="相关阅读："></a>相关阅读：</h3><p>本文档和项目代码地址：<a href="https://github.com/zhisheng17/springmvc" target="_blank" rel="external">https://github.com/zhisheng17/springmvc</a></p>
+<hr>
+<p>了解 Spring：</p>
+<p>Spring 官网：<a href="http://spring.io/" target="_blank" rel="external">http://spring.io/</a></p>
+<p>一个好的东西一般都会有一个好的文档解释说明，如果你英语还行，建议还是看官方文档。</p>
+<hr>
+<h2 id="Spring-MVC基础知识"><a href="#Spring-MVC基础知识" class="headerlink" title="Spring MVC基础知识"></a>Spring MVC基础知识</h2><p>什么是Spring MVC？</p>
+<p>Spring MVC框架原理（掌握）</p>
+<p>​    前端控制器、处理器映射器、处理器适配器、试图解析器<br><a id="more"></a><br>Spring MVC 入门程序</p>
+<p>​    目的：对前端控制器、处理器映射器、处理器适配器、试图解析器学习</p>
+<p>​    非注解的处理器映射器、处理器适配器</p>
+<p>​    注解的处理器映射器、处理器适配器（掌握）</p>
+<p>Spring MVC 和 Mybatis 整合（掌握）</p>
+<p>Spring MVC 注解开发：（掌握）</p>
+<p>​    常用的注解学习</p>
+<p>​    参数绑定（简单类型，pojo类型、集合类型）</p>
+<p>​    自定义的参数绑定（掌握）</p>
+<p>Spring MVC 和 Struts2区别</p>
+<h2 id="Spring-MVC高级应用"><a href="#Spring-MVC高级应用" class="headerlink" title="Spring MVC高级应用"></a>Spring MVC高级应用</h2><p>参数绑定（集合类型）</p>
+<p>数据回显</p>
+<p>上传图片</p>
+<p>json 数据交互</p>
+<p>RESTful 支持</p>
+<p>拦截器</p>
+<hr>
+<h2 id="Spring-MVC-框架"><a href="#Spring-MVC-框架" class="headerlink" title="Spring MVC 框架"></a>Spring MVC 框架</h2><h3 id="什么是Spring-MVC？"><a href="#什么是Spring-MVC？" class="headerlink" title="什么是Spring MVC？"></a>什么是Spring MVC？</h3><p>springmvc是spring框架的一个模块，springmvc和spring无需通过中间整合层进行整合。<br>springmvc是一个基于mvc的web框架。</p>
+<p><img src="http://img.blog.csdn.net/20161219214558360?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h3 id="Web-MVC"><a href="#Web-MVC" class="headerlink" title="Web MVC"></a>Web MVC</h3><p>MVC 设计模式在  <strong>B/S</strong> 系统下应用：</p>
+<p><img src="http://img.blog.csdn.net/20161219214629187?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>1、  用户发起request请求至控制器(Controller)</p>
+<p>控制接收用户请求的数据，委托给模型进行处理</p>
+<p>2、  控制器通过模型(Model)处理数据并得到处理结果</p>
+<p>模型通常是指业务逻辑</p>
+<p>3、  模型处理结果返回给控制器</p>
+<p>4、  控制器将模型数据在视图(View)中展示</p>
+<p>web中模型无法将数据直接在视图上显示，需要通过控制器完成。如果在C/S应用中模型是可以将数据在视图中展示的。</p>
+<p>5、  控制器将视图response响应给用户</p>
+<p>通过视图展示给用户要的数据或处理结果。</p>
+<h3 id="Spring-MVC-框架-1"><a href="#Spring-MVC-框架-1" class="headerlink" title="Spring MVC 框架"></a>Spring MVC 框架</h3><p><img src="http://img.blog.csdn.net/20161219214646359?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHpzXzEwNDEyMTgxMjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>第一步：发起请求到前端控制器(DispatcherServlet)</p>
+<p>第二步：前端控制器请求HandlerMapping查找 Handler</p>
+<p>可以根据xml配置、注解进行查找</p>
+<p>第三步：处理器映射器HandlerMapping向前端控制器返回Handler</p>
+<p>第四步：前端控制器调用处理器适配器去执行Handler</p>
+<p>第五步：处理器适配器去执行Handler</p>
+<p>第六步：Handler执行完成给适配器返回ModelAndView</p>
+<p>第七步：处理器适配器向前端控制器返回ModelAndView</p>
+<p>ModelAndView是springmvc框架的一个底层对象，包括Model和view</p>
+<p>第八步：前端控制器请求视图解析器去进行视图解析</p>
+<p>根据逻辑视图名解析成真正的视图(jsp)</p>
+<p>第九步：视图解析器向前端控制器返回View</p>
+<p>第十步：前端控制器进行视图渲染</p>
+<p>视图渲染将模型数据(在ModelAndView对象中)填充到request域</p>
+<p>第十一步：前端控制器向用户响应结果</p>
+<p><strong>组件</strong>：</p>
+<p>1、前端控制器DispatcherServlet（不需要程序员开发）</p>
+<p>作用接收请求，响应结果，相当于转发器，中央处理器。</p>
+<p>有了DispatcherServlet减少了其它组件之间的耦合度。</p>
+<p>2、处理器映射器HandlerMapping(不需要程序员开发)</p>
+<p>作用：根据请求的url查找Handler</p>
+<p>3、处理器适配器HandlerAdapter</p>
+<p>作用：按照特定规则（HandlerAdapter要求的规则）去执行Handler</p>
+<p>4、处理器Handler(需要程序员开发)</p>
+<p>注意：编写Handler时按照HandlerAdapter的要求去做，这样适配器才可以去正确执行Handler</p>
+<p>5、视图解析器View resolver(不需要程序员开发)</p>
+<p>作用：进行视图解析，根据逻辑视图名解析成真正的视图（view）</p>
+<p>6、视图View(需要程序员开发jsp)</p>
+<p>View是一个接口，实现类支持不同的View类型（jsp、freemarker、pdf…）</p>
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/11/poetry/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-java-var" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/06/java-var/">从对象深入分析 Java 中实例变量和类变量的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/06/java-var/" class="archive-article-date">
-  	<time datetime="2017-05-06T06:24:51.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="实例变量-和-类变量"><a href="#实例变量-和-类变量" class="headerlink" title="实例变量 和 类变量"></a>实例变量 和 类变量</h3><h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>特点：作用时间短，存储在方法的栈内存中</p>
-<p>种类：</p>
-<ul>
-<li>形参：方法签名中定义的局部变量，由方法调用者负责为其赋值，随方法结束而消亡</li>
-<li>方法内的局部变量：方法内定义的局部变量，必须在方法内对其进行显示初始化，从初始化后开始生效，随方法结束而消亡</li>
-<li>代码块内的局部变量：在代码块中定义的局部变量，必须在代码块中进行显示初始化，从初始化后开始生效，随代码块结束而消亡</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/05/06/java-var/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你支持我买服务器！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -338,74 +327,9 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/06/java-var/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Java-performance-tuning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/30/Java-performance-tuning/">Java 性能调优需要格外注意的细节</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/30/Java-performance-tuning/" class="archive-article-date">
-  	<time datetime="2017-04-30T05:20:06.291Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天写了篇文章 <a href="http://www.54tianzhisheng.cn/2017/04/29/MySQL-select-good/">《MySQL 处理海量数据时的一些优化查询速度方法》</a> ，其实开发中不止数据库要优化，还有我们本身的开发代码也需要优化，这样我们开发的产品才能够得到极致的体验。也许有些人认为这些细小的地方没有啥好修改的，改与不改对运行效率没啥大的影响？首先在我们本地一个人测试下效率是不怎么明显，但是如果到发布上线后，你的用户有几百万，甚至上千万，这些用户同时访问你的网站，那么你的网站是否经得住考验呢，效率那高不高呢，如果效率不高，那么需要多出很多买服务器的经费呢，所以想想还是很有必要注意这些小的细节。今天就讲讲一些 Java 性能调优需要格外注意的一些细节。</p>
-<p>代码优化的目标：</p>
-<ul>
-<li>减少代码的体积</li>
-<li>提高代码的运行效率</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring MVC</a>
         		</li>
       		
 		</ul>
@@ -414,18 +338,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/30/Java-performance-tuning/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwElEQVR42u3awU7DMBAE0P7/T4PECQmSzqztUqSXU0XbxC9I8XZ2H4/4+Pg6vr++On5+/ud5rr519cn7c2448PDw8EZLb5eb/+We0d7QfM14eHh4p3ntZtA+rJOztbz7b+Hh4eG9Ay9/6O/dNvDw8PD+Ly8pYa8Wcb/EXcEEHh4e3it5SRiRFND5TWk3nuNZCx4eHl7Mm0UJf/v6eH8PDw8Pb9RVzx/KKxHwynmerBYPDw/vAC+PXNsL7H1ur7TE8PDw8M7xVkLbGWw2oNDGx3h4eHh7eXk5m7ej8iihbWvlUS8eHh7eaV5e7O4Kf9dT5yJrwcPDw9vKmz2CkyBjduNm1y3+AXh4eHjLvHwpeSO/BcyaYdEmhIeHh3eY15bRKwFEG9rm4fJlPo2Hh4e3ideW13nB3bbK2mBi+IsBDw8Pb5mXbwYrzao2yNgWBOPh4eEd4LXF7mw7aR/o7eZR5NN4eHh4y7x8JDR5dwbLx2HbTQUPDw/vBK99lOfZRhvR5s2zZKO6zKrx8PDwlnntT/28YZZsA7OIttiW8PDw8I7x2sfxUoFbbjx5sPvLt/Dw8PAO8/Im1nASYRTItltC9FsBDw8Pb4GXF7XtEtvBrDauzQMOPDw8vNfwVoYJ8rbWrFCelfh4eHh4u3h5234Wv842jHxDerIl4OHh4R3j5T/72+GApODOB7bq9hseHh7eAd7skrMtZDgRFscQj113FA8PD+/2bCtl7srt2PVuEUbg4eHhHeC1BetKMZ2cob3uk8kIPDw8vE282ZhUO1jQNrRWRgSGSDw8PLyStz59cP+wboOGvCEXbQx4eHh4x3j50FUeAc8y1TaHxsPDw3tnXv7ursGp2drw8PDw3o23qwSfXSUfX8DDw8M7zcubXu1f2lvWluxPggw8PDy8A7xZA6wNW9vodjgEMDvw8PDw0uMTMGnkKTBcEX0AAAAASUVORK5CYII=" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/28/奇怪的Java题：为什么128 == 128返回为False，而127 == 127会返回为True-/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          奇怪的Java题：为什么128 == 128返回为False，而127 == 127会返回为True?
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/28/Spring MVC+Hibernate JPA搭建的博客系统项目中所遇到的坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring MVC+Hibernate JPA搭建的博客系统项目中所遇到的坑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -433,141 +422,30 @@
 
 
   
-    <article id="post-MySQL-select-good" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/29/MySQL-select-good/">MySQL 处理海量数据时的一些优化查询速度方法</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/04/29/MySQL-select-good/" class="archive-article-date">
-  	<time datetime="2017-04-29T10:05:54.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在参与实际项目中，当 MySQL 表的数据量达到百万级时，普通的 SQL 查询效率呈直线下降，而且如果 where 中的查询条件较多时，其查询速度无法容忍。想想可知，假如我们查询淘宝的一个订单详情，如果查询时间高达几十秒，这么高的查询延时，任何用户都会抓狂。因此如何提高 SQL 语句查询效率，显得十分重要。<br>
-        
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/29/MySQL-select-good/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
+  <section id="comments">
+<!--高速版，加载速度快，使用前需测试页面的兼容性-->
+<div id="SOHUCS" sid="通过项目逐步深入了解Spring MVC（一）"  style="padding: 0px 30px 0px 46px;"></div>
+<script>
+  (function(){
+    var appid = 'cysWCg9Ij',
+    conf = '7f51baf245f3217589bb3b4ba8d8c691';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>
+  </section>
   
-    <article id="post-feiji" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/23/feiji/">记录下自己第一次坐飞机的感受</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/23/feiji/" class="archive-article-date">
-  	<time datetime="2017-04-23T02:20:42.665Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>因为学校的原因，需要在大三的时候出去实训几个月，然后选择的是在昆山，公司规定要在 2017 年 4 月 19 号之前赶到，所以我提前订的机票是 17 号，之所以会订机票，其实很大一部分原因是由于自己之前没有坐过飞机，所以想体验一下坐飞机的感脚（嘿嘿），再加上这是机票的淡季，所以坐飞机的价钱比做高铁还便宜。整个行程：学校 ——&gt;  南昌机场 ——&gt;  上海虹桥机场 ——&gt;  公司</p>
-<h3 id="学校出发"><a href="#学校出发" class="headerlink" title="学校出发"></a>学校出发</h3><p>10 点左右去食堂吃了个早餐，然后打包好自己的行李，由于第一次坐飞机，所以打算提前时间去机场，然后在机场熟悉熟悉环境，不然的话错过飞机，那就 gg 了。大概 11：30 了，就拖着行李出门，在学校门口叫了辆 滴滴车 去机场（因为公交车要坐好久并且去机场的路好烂），叫的滴滴车他走的是高速，很快。<br>
-        
-          <a class="article-more-a" href="/2017/04/23/feiji/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/23/feiji/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-
 
           </div>
         </div>
@@ -596,8 +474,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
